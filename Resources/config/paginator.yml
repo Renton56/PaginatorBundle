@@ -1,0 +1,10 @@
+        
+services:     
+     request:
+         class: Symfony\Component\HttpFoundation\Request
+
+     paginator.twig.extension:
+         class: Renton56\PaginatorBundle\Twig\PaginatorExtension
+         arguments:  ["@request"]
+         tags:
+             - { name: 'twig.extension' }        
